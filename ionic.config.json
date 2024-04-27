@@ -1,0 +1,7 @@
+{
+  "name": "hermes3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
