@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Markets
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Markets</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <xereca
+          [name]="'Bitcu'"
+          [symbol]="'BTC'"
+          [price]="'$63,930.00'"
+        >
+        </xereca>
+      </ion-col>
+      <ion-col>
+        <xereca
+          [name]="'Bitxota'"
+          [symbol]="'BTX'"
+          [price]="'36.00'"
+        >
+        </xereca>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
