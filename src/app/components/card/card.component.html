@@ -1,4 +1,4 @@
-<ion-card>
+<!-- <ion-card>
   <ion-card-header>
     <ion-card-title>{{name}}</ion-card-title>
     <ion-card-subtitle>{{symbol}}</ion-card-subtitle>
@@ -6,3 +6,26 @@
 
   <ion-card-content>{{price}}</ion-card-content>
 </ion-card>
+
+<div *ngIf="coinData">
+  <h2>{{ coinData.name }} ({{ coinData.symbol.toUpperCase() }})</h2>
+  <p>Current Price: ${{ coinData.market_data.current_price.usd }}</p>
+  <p>Market Cap: ${{ coinData.market_data.market_cap.usd }}</p>
+</div>
+ -->
+
+ <div *ngIf="coinData">
+  <ion-card>
+    <ion-card-header>
+      <img width="90" height="90" alt="Bostileiro Médio" src={{coinData.data.image.large}} />
+      <ion-card-title>{{ coinData.data.name }}</ion-card-title>
+      <ion-card-subtitle>{{ coinData.data.symbol.toUpperCase() }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Current Price: ${{ coinData.data.market_data.current_price.usd }}</p>
+      <p>Market Cap: ${{ coinData.data.market_data.market_cap.usd }}</p>
+      <!-- Adicione mais informações conforme necessário -->
+    </ion-card-content>
+  </ion-card>
+</div>
